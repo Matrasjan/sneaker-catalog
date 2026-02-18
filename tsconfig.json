@@ -1,0 +1,35 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "files": [],
+  "references": [
+    {
+      "path": "./.nuxt/tsconfig.app.json"
+    },
+    {
+      "path": "./.nuxt/tsconfig.server.json"
+    },
+    {
+      "path": "./.nuxt/tsconfig.shared.json"
+    },
+    {
+      "path": "./.nuxt/tsconfig.node.json"
+    }
+  ],
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "types": ["./types", "./types/element-plus-locale.d.ts"]
+  },
+  "include": [
+    "app/types/**/*.d.ts",
+    "app/stores/**/*.ts",
+    "pages/**/*.vue",
+    "components/**/*.vue",
+    "app/composables/**/*.ts",
+    "plugins/**/*.ts"
+  ]
+}

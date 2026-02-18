@@ -1,0 +1,45 @@
+@use 'variables' as *;
+
+.catalog {
+  width: 100%;
+
+  padding: 0 60px;
+
+  .catalog__title {
+    font-size: 42px;
+    line-height: 110%;
+    font-family: 'GolosText';
+    margin: 100px 0 110px;
+    font-weight: 500;
+    color: $color-black;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: 600px) {
+      margin: 40px 0;
+    }
+  }
+
+  .catalog__controls {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 110px;
+
+    @media (max-width: 600px) {
+      margin-bottom: 40px;
+    }
+
+    .catalog__more {
+      font-size: 14px;
+      font-family: 'GolosText';
+      line-height: 20px;
+      background-color: white;
+      height: 40px;
+      width: 144px;
+    }
+  }
+}

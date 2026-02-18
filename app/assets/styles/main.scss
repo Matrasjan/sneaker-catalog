@@ -1,0 +1,13 @@
+@use 'variables';
+@use 'product-card';
+@use 'catalog';
+@use 'header';
+@use 'footer';
+@use 'home';
+@use 'layout';
+@use 'page-catalog';
+
+body {
+  margin: 0;
+  font-family: 'GolosText';
+}
