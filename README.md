@@ -15,7 +15,3 @@ npm nuxt dev
 ```
 npm nuxt build
 ```
-
-
-### Author: Yulia Slatvitskaya
-https://github.com/matrasjan
