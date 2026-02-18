@@ -4,13 +4,17 @@ import type { Product } from '~/types/Product';
 const props = defineProps<{
   product: Product;
 }>();
+
+const halfPrice = computed<number>(() => {
+  return Math.ceil(props.product.price / 2);
+});
 </script>
 
 <template>
   <a href="#" class="product-card">
     <div class="product-card__image-wrapper">
       <img
-        src="/image.png"
+        :src="product.image"
         :alt="product.name"
         class="product-card__image"
       />
@@ -20,12 +24,12 @@ const props = defineProps<{
 
     <div class="product-card__content">
       <div class="product-card__prices">
-        <span class="product-card__price">16 285 ₽</span>
+        <span class="product-card__price"> {{ product.price }} ₽</span>
 
-        <span class="product-card__price--half">8 328 ₽ x2</span>
+        <span class="product-card__price--half">{{ halfPrice }}₽ x2</span>
       </div>
 
-      <div class="product-card__title">Adidas Originals Gazelle</div>
+      <div class="product-card__title">{{ product.name }}</div>
     </div>
   </a>
 </template>
