@@ -1,19 +1,16 @@
 @use 'variables' as *;
 
 .footer {
-  height: 390px;
-
   display: flex;
   align-items: center;
 
   background-color: $color-black;
-  padding: 0 32px;
+  padding: 92px 32px 91px;
+  justify-content: center;
 
   @media (max-width: 600px) {
     height: 100%;
-    
     flex-direction: column;
-
     padding: 60px 32px;
   }
 
@@ -22,21 +19,27 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    width: 100%;
+    max-width: 1280px;
   }
 
   &__nav {
-    display: flex;
-    gap: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
 
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
     @media (max-width: 600px) {
-      flex-direction: column;
+      grid-template-columns: 1fr;
     }
 
     .column {
-      width: 314px;
-
       display: flex;
       flex-direction: column;
+      min-width: 0;
     }
   }
 
@@ -44,6 +47,7 @@
     margin-bottom: 16px;
     text-decoration: none;
     color: $color-white;
+    word-break: break-word;
   }
 
   &__link.title {
